@@ -1,5 +1,7 @@
 🚀 Nusa IT Candidate Project
+
 Simple Login & Register System
+
 Hi! This is my submission for the IT Candidate Challenge. I built a full-stack application that allows a user to Register and Login.
 
 📦 What is inside?
