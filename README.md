@@ -1,57 +1,113 @@
-🚀 Nusa IT Candidate Project
+# 🚀 Simple Full-Stac Project
 
-Simple Login & Register System
+### Simple Login & Register System
 
-Hi! This is my submission for the IT Candidate Challenge. I built a full-stack application that allows a user to Register and Login.
+Hi! This is my submission for the IT Candidate Challenge for job recrutment process.
+This project is a full-stack web application that allows users to **register and log in securely**.
 
-📦 What is inside?
+---
 
-Website (Frontend): Built with Vue.js.
+## 📦 Tech Stack
 
-Server (Backend): Built with Golang.
+* **Frontend:** Vue.js
+* **Backend:** Golang (Go)
+* **Database:** MySQL (Dockerized)
 
-Database: MySQL running inside Docker.
+---
 
-🛠️ How to run this on your computer
+## ✨ Features
 
-1. The Database
-   
-Make sure Docker Desktop is open. In your terminal, type:
+* 🔐 **Secure Authentication**
 
-Bash
+  * Passwords are hashed using **bcrypt** (no plain text storage)
+
+* 🐳 **Dockerized Database**
+
+  * MySQL runs inside Docker — no manual installation needed
+
+* 👋 **User Experience**
+
+  * Displays a personalized welcome message after login
+
+---
+
+## 🛠️ How to Run the Project
+
+### 1️⃣ Start the Database
+
+Make sure **Docker Desktop** is running, then execute:
+
+```bash
 docker-compose up -d
+```
 
-This starts the MySQL database automatically.
+This will automatically start the MySQL database.
 
-2. The Backend (The Server)
-   
-Go into the backend folder and run:
+---
 
-Bash
+### 2️⃣ Run the Backend
+
+Navigate to the backend folder:
+
+```bash
+cd backend
 go run main.go
+```
 
-This starts the API that handles the login logic.
+This starts the API server that handles authentication logic.
 
-3. The Frontend (The Website)
-   
-Go into the frontend folder and run:
+---
 
-Bash
+### 3️⃣ Run the Frontend
+
+Navigate to the frontend folder:
+
+```bash
+cd frontend
 npm install
 npm run dev
+```
 
-Click the link shown in your terminal (usually http://localhost:5173) to see the website.
+Open the link shown in your terminal (usually):
+👉 http://localhost:5173
 
-✨ Features
-Secure Passwords: I use bcrypt so passwords are encrypted (not plain text).
+---
 
-Docker: You don't need to install MySQL manually; Docker handles it.
+## 📁 Project Structure
 
-Welcome Message: Once you login, the website will greet you by name!
+```
+project-root/
+│── backend/        # Go backend (API)
+│── frontend/       # Vue.js frontend
+│── docker-compose.yml
+```
 
-👤 My Details
-Name: Fazrul
+---
 
-Role: IT Candidate
+## 👤 Author
 
-Status: Graduating February 2026
+**Name:** Fazrul Azim   
+
+**Role:** IT Candidate   
+
+**Status:** Graduating February 2026
+
+---
+
+## 💡 Notes
+
+This project demonstrates:
+
+* Full-stack development skills
+* Basic authentication system design
+* Docker usage for environment setup
+* Clean and simple UI integration with backend
+
+---
+
+## 📬 Contact
+
+If you have any questions or feedback, feel free to reach out!
+📧 [fazrulazim37@gmail.com](mailto:fazrulazim37@gmail.com)
+
+---
