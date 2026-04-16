@@ -21,8 +21,8 @@ var DB *gorm.DB
 
 func main() {
 	// 1. Connect to MySQL (Change 'root:' if you set a password in XAMPP)
-	dsn := "root:@tcp(127.0.0.1:3306)/simple_login_project?charset=utf8mb4&parseTime=True&loc=Local" //if use docker mysql
-	//dsn := "root:root@tcp(127.0.0.1:3306)/simple_login_project?charset=utf8mb4&parseTime=True&loc=Local" //if use xampp mysql
+	dsn := "root:root@tcp(127.0.0.1:3306)/simple_login_project?charset=utf8mb4&parseTime=True&loc=Local" //if use docker mysql
+	//dsn := "root:@tcp(127.0.0.1:3306)/simple_login_project?charset=utf8mb4&parseTime=True&loc=Local" //if use xampp mysql
 	var err error
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
