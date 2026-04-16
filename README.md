@@ -13,26 +13,33 @@ Server (Backend): Built with Golang.
 Database: MySQL running inside Docker.
 
 🛠️ How to run this on your computer
+
 1. The Database
+   
 Make sure Docker Desktop is open. In your terminal, type:
 
 Bash
 docker-compose up -d
+
 This starts the MySQL database automatically.
 
 2. The Backend (The Server)
+   
 Go into the backend folder and run:
 
 Bash
 go run main.go
+
 This starts the API that handles the login logic.
 
 3. The Frontend (The Website)
+   
 Go into the frontend folder and run:
 
 Bash
 npm install
 npm run dev
+
 Click the link shown in your terminal (usually http://localhost:5173) to see the website.
 
 ✨ Features
