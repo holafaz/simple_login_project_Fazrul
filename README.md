@@ -5,6 +5,7 @@ Simple Login & Register System
 Hi! This is my submission for the IT Candidate Challenge. I built a full-stack application that allows a user to Register and Login.
 
 📦 What is inside?
+
 Website (Frontend): Built with Vue.js.
 
 Server (Backend): Built with Golang.
