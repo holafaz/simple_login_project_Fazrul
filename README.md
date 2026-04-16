@@ -1,4 +1,4 @@
-# 🚀 Simple Full-Stac Project
+# 🚀 Simple Full-Stack Development Project
 
 ### Simple Login & Register System
 
