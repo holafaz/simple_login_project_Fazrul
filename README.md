@@ -104,6 +104,14 @@ This project demonstrates:
 * Clean and simple UI integration with backend
 
 ---
+## ⚠️ Important Technical Note
+This project is a clean starter application designed to demonstrate full-stack connectivity and logic. It is not yet intended for a live production environment.
+For a full production deployment, I would implement:
+
+* JWT or Session Management: To handle persistent user authentication.
+* Secure Cookies & CSRF Protection: To prevent cross-site request forgery.
+* Rate Limiting: To protect the login endpoints from brute-force attacks.
+* Stricter Security Hardening: Including environment variable management (.env) and input sanitization.
 
 ## 📬 Contact
 
