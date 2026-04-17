@@ -9,7 +9,7 @@
         <h2>{{ isLogin ? 'Login' : 'Create Account' }}</h2>
         
         <div class="form-group">
-          <input v-model="form.username" placeholder="Username" />
+          <input v-model="form.email" type="email" placeholder="Email Address" />
           <input v-model="form.password" type="password" placeholder="Password" />
         </div>
 
@@ -44,11 +44,21 @@ const loggedIn = ref(false)
 const currentUser = ref('')
 
 const handleAction = async () => {
-  if (!form.username || !form.password) {
+// Simple Email Validation (Check for @)
+  const emailRegex = /\S+@\S+\.\S+/
+  
+  if (!form.email || !form.password) {
     statusMsg.value = "Please fill all fields"
     statusType.value = "error"
     return
   }
+
+  if (!emailRegex.test(form.email)) {
+    statusMsg.value = "Please enter a valid email address (missing @ or .)"
+    statusType.value = "error"
+    return
+  }
+
 
   const url = isLogin.value ? 'http://localhost:8080/login' : 'http://localhost:8080/register'
   
