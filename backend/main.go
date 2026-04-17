@@ -13,7 +13,7 @@ import (
 // User table structure
 type User struct {
 	ID       uint   `gorm:"primaryKey"`
-	Username string `gorm:"unique;not null" json:"username"`
+	Email    string `gorm:"unique;not null" json:"email"`
 	Password string `gorm:"not null" json:"password"`
 }
 
@@ -71,8 +71,8 @@ func LoginUser(c *gin.Context) {
 		return
 	}
 
-	// Find user by username
-	if err := DB.Where("username = ?", input.Username).First(&user).Error; err != nil {
+	// Find user by email
+	if err := DB.Where("email = ?", input.Email).First(&user).Error; err != nil {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not found"})
 		return
 	}
@@ -84,5 +84,5 @@ func LoginUser(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "Login successful!", "user": user.Username})
+	c.JSON(http.StatusOK, gin.H{"message": "Login successful!", "user": user.Email})
 }
